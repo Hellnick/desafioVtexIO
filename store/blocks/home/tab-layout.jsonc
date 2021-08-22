@@ -1,0 +1,116 @@
+{
+// ** Creation of a tab-layout to sort some products
+
+  "tab-layout#categories": {
+    "children": [
+      "tab-list#categories",
+      "tab-content#categories"
+    ],
+    "props": {
+      "blockClass": "categories",
+      "defaultActiveTabId": "cat1"
+    }
+  },
+
+  "tab-list#categories": {
+    "children": [
+      "tab-list.item#cat1",
+      "tab-list.item#cat2",
+      "tab-list.item#cat3",
+      "tab-list.item#cat4"
+    ]
+  },
+  "tab-list.item#cat1": {
+    "props": {
+      "tabId": "cat1",
+      "label": "Category 1",
+      "defaultActiveTab": "true"
+    }
+  },
+  "tab-list.item#cat2": {
+    "props": {
+      "tabId": "cat2",
+      "label": "Category 2"
+    }
+  },
+  "tab-list.item#cat3": {
+    "props": {
+      "tabId": "cat3",
+      "label": "Category 3"
+    }
+  },
+  "tab-list.item#cat4": {
+    "props": {
+      "tabId": "cat4",
+      "label": "Category 4"
+    }
+  },
+
+  "tab-content#categories": {
+    "children": [
+      "tab-content.item#cat1",
+      "tab-content.item#cat2",
+      "tab-content.item#cat3",
+      "tab-content.item#cat4"
+    ]
+  },
+  "tab-content.item#cat1": {
+    "children": [
+      "rich-text#cat1"
+    ],
+    "props": { "tabId": "cat1"}
+  },
+  "rich-text#cat1": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Categoria 1",
+      "textColor": "c-on-emphasis"
+    }
+  },
+
+  "tab-content.item#cat2": {
+    "children": [
+      "rich-text#cat2"
+    ],
+    "props": { "tabId": "cat2"}
+  },
+  "rich-text#cat2": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Categoria 2",
+      "textColor": "c-on-emphasis"
+    }
+  },
+
+  "tab-content.item#cat3": {
+    "children": [
+      "rich-text#cat3"
+    ],
+    "props": { "tabId": "cat3"}
+  },
+  "rich-text#cat3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Categoria 3",
+      "textColor": "c-on-emphasis"
+    }
+  },
+
+  "tab-content.item#cat4": {
+    "children": [
+      "rich-text#cat4"
+    ],
+    "props": { "tabId": "cat4"}
+  },
+  "rich-text#cat4": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Categoria 4",
+      "textColor": "c-on-emphasis"
+    }
+  }
+}

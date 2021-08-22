@@ -8,7 +8,7 @@
     "props": {
       "querySchema": {
         "queryField": "Corinthians",
-        "mapField": "c",
+        "mapField": "",
         "skusFilter": "FIRST_AVAILABLE",
         "simulationBehavior": "skip",
         "maxItemsPerPage": "8"

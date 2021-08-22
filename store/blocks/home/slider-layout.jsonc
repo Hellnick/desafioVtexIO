@@ -1,0 +1,33 @@
+{
+  /* 
+    This slider layout will show a couple images about
+    ongoing promotions on the store
+  */
+
+  "slider-layout#featProducts": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly"
+    },
+    "children": [
+      "image#feature1",
+      "image#feature2"
+    ]
+  },
+  "image#feature1": {
+    "props": {
+      "src": "assets/banner-wood.png"
+    }
+  },
+  "image#feature2": {
+    "props": {
+      "src": "assets/banner-warriors.png"
+    }
+  }
+}
