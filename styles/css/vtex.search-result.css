@@ -1,0 +1,15 @@
+.gallery {
+  margin: 0 1rem;
+  align-content: center;
+  display: flex;
+}
+
+.galleryItem--normal {
+  width: 5rem;
+  margin: auto;
+}
+
+.galleryItem--grid {
+  width: 5rem;
+  margin: auto;
+}

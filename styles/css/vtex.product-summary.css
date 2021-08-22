@@ -1,0 +1,7 @@
+.nameContainer,
+.productImageTag,
+.container,
+.wraper,
+.flexColChild {
+  pointer-events: none;
+}

@@ -1,0 +1,124 @@
+{
+  /*  
+      Each tab is responsible to show results of the products in their category.
+      Here we're setting up the layout of the search results, showing the products
+      on the gallery and all the contents shown in the page.
+  */
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "queryField": "Corinthians",
+        "mapField": "c",
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": "8"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile"
+    ]
+  },
+  "search-result-layout.desktop#home": {
+    "children": [
+      "flex-layout.row#result",
+      "search-fetch-more"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "flex-layout.row#result": {
+    "children": ["search-content#home"],
+    "props": {
+      "blockClass": "searchResults",
+      "preventHorizontalStretch": true
+    }
+  },
+  "search-content#home": {
+    "blocks":[
+      "gallery#home",
+      "not-found"
+    ]
+  },
+  "gallery#home": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width: 1300px)": 2,
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
+          }
+        },
+        {
+          "name": "List",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf#home",
+      "GridSummary": "product-summary.shelf#home"
+    }
+  },
+  "product-summary.shelf#home": {
+    "children": [
+      "product-summary-name",
+      "product-images#home",
+      "rich-text#launch",
+      "rich-text#validation",
+      "flex-layout.row#priceAndBuy"
+    ]
+  },
+  "product-images#home": {
+    "props": {
+      "thumbnailsOrientation": "horizontal",
+      "zoomMode": "disabled"
+    }
+  },
+  "rich-text#launch": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "PRÉ-LANÇAMENTO"
+    }
+  },
+  "rich-text#validation": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "#t-heading-6",
+      "text": "VALIDAÇÃO A PARTIR DE 09/10/2021"
+    }
+  },
+  "flex-layout.row#priceAndBuy": {
+    "children": [
+      "flex-layout.col#price",
+      "flex-layout.col#buyButton"
+    ]
+  },
+  "flex-layout.col#price": {
+    "children": ["product-selling-price", "product-list-price#null"],
+    "props": {"blockClass": "price"}
+  },
+  "product-list-price#null": {
+    "props": {
+      "message": ""
+    }
+  },
+  "flex-layout.col#buyButton": {
+    "children": ["add-to-cart-button#home"]
+  },
+
+  "add-to-cart-button#home": {
+    "props": {
+      "onClickBehavior": "go-to-product-page",
+      "text": "VER DETALHES",
+      "unavailableText": "PRODUTO INDISPONÍVEL",
+      "blockClass": "button"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.searchIcon,
+.closeIcon {
+  color: white;
+}
+
+.swiperCaret,
+.swiper-pagination {
+  pointer-events: initial;
+}
+
+.button--button {
+  background-color: chartreuse;
+}
